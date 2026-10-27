@@ -1,0 +1,10 @@
+services:
+  - type: worker
+    name: vipbot
+    runtime: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python -u vipbot.py"
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
